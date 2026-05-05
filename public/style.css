@@ -72,6 +72,8 @@ body {
   padding: 20px;
   position: relative;
   z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -567,6 +569,141 @@ body {
   }
 }
 
+/* iPhone / Small Phone Optimizations */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .cyber-header {
+    padding: 15px 10px;
+  }
+
+  .glitch {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+  }
+
+  .header-line {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .line-left, .line-right {
+    max-width: 50px;
+  }
+
+  .input-section {
+    padding: 0 10px;
+  }
+
+  .cyber-panel {
+    padding: 18px 15px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .panel-corner {
+    width: 10px;
+    height: 10px;
+  }
+
+  .panel-title {
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .cyber-form {
+    gap: 15px;
+  }
+
+  .cyber-input, .cyber-textarea {
+    padding: 10px 12px;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+
+  .cyber-textarea {
+    min-height: 100px;
+  }
+
+  .cyber-button {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+
+  .entries-section {
+    padding: 0 10px;
+  }
+
+  .section-header {
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    font-size: 0.85rem;
+  }
+
+  .live-indicator {
+    gap: 5px;
+  }
+
+  .live-text {
+    font-size: 0.65rem;
+  }
+
+  .entry-card {
+    padding: 15px 12px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .entry-name {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+  }
+
+  .entry-date {
+    font-size: 0.7rem;
+  }
+
+  .entry-message {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .entry-actions {
+    gap: 8px;
+  }
+
+  .reaction-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    gap: 4px;
+  }
+
+  .reaction-btn .count {
+    font-size: 0.75rem;
+  }
+
+  .cyber-footer {
+    padding: 25px 10px 15px;
+    margin-top: 25px;
+  }
+
+  .cyber-footer p {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -583,4 +720,20 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--neon-cyan);
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Fix for small screens - prevent element overflow */
+* {
+  max-width: 100%;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
 }
