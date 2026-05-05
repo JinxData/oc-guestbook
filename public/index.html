@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC Guestbook | Cyberpunk Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="crt-overlay"></div>
+    
+    <div class="container">
+        <header class="cyber-header">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="OC_GUESTBOOK">OC_GUESTBOOK</h1>
+            </div>
+            <p class="subtitle">/// NEURAL_NET_ACCESS_POINT ///</p>
+            <div class="header-line">
+                <span class="line-left"></span>
+                <span class="line-text">EST. 2026</span>
+                <span class="line-right"></span>
+            </div>
+        </header>
+
+        <section class="input-section">
+            <div class="cyber-panel">
+                <div class="panel-corner tl"></div>
+                <div class="panel-corner tr"></div>
+                <div class="panel-corner bl"></div>
+                <div class="panel-corner br"></div>
+                
+                <h2 class="panel-title">
+                    <span class="blink">&gt;</span> NEW_ENTRY
+                </h2>
+                
+                <form id="guestbookForm" class="cyber-form">
+                    <div class="form-group">
+                        <label for="name" class="cyber-label">
+                            <span class="label-icon">◈</span> USERNAME
+                        </label>
+                        <input type="text" id="name" name="name" class="cyber-input" 
+                               placeholder="Enter your alias..." maxlength="50" required>
+                        <div class="input-underline"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="cyber-label">
+                            <span class="label-icon">◈</span> MESSAGE_DATA
+                        </label>
+                        <textarea id="message" name="message" class="cyber-textarea" 
+                                  placeholder="Transmit your message..." maxlength="500" required></textarea>
+                        <div class="char-count"><span id="charCount">0</span>/500</div>
+                    </div>
+                    
+                    <button type="submit" class="cyber-button">
+                        <span class="btn-glitch"></span>
+                        <span class="btn-text">TRANSMIT</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="entries-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="blink">&gt;</span> NETWORK_LOG
+                </h2>
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    <span class="live-text">LIVE</span>
+                </div>
+            </div>
+            
+            <div id="entriesContainer" class="entries-container">
+                <div class="loading">INITIALIZING NEURAL_LINK...</div>
+            </div>
+        </section>
+
+        <footer class="cyber-footer">
+            <div class="footer-line"></div>
+            <p>// SECURE_LOCAL_NETWORK // HOMENET_V1.0 //</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
